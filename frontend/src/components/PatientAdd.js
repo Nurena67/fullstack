@@ -5,7 +5,7 @@ import { createPatient } from "../services/api";
 const PatientAdd = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    medicalRecordNumber: '',
+    // medicalRecordNumber: '',
     name: '',
     age: '',
     gender: '',
@@ -20,7 +20,7 @@ const PatientAdd = () => {
     await createPatient(formData);
     alert('Pasien Berhasil di Tambahkan');
     setFormData({
-      medicalRecordNumber: '',
+    //   medicalRecordNumber: '',
       name: '',
       age: '',
       gender: '',
@@ -41,7 +41,7 @@ const PatientAdd = () => {
       <h1 className="title">Form New Patient</h1>
       <form onSubmit={handleSubmit}>
 
-    <div className="field">
+    {/* <div className="field">
     <label className="label">Nomor Rekam Medis</label>
     <div className="control">
         <input
@@ -55,7 +55,7 @@ const PatientAdd = () => {
             required
         />
     </div>
-</div>
+</div> */}
       <div className="field">
                 <label className="label">Nama Lengkap</label>
                 <div className="control">
