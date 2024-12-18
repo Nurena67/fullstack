@@ -5,6 +5,7 @@ import { createPatient } from "../services/api";
 const PatientAdd = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
+    medicalRecordNumber: '',
     name: '',
     age: '',
     gender: '',
@@ -19,6 +20,7 @@ const PatientAdd = () => {
     await createPatient(formData);
     alert('Pasien Berhasil di Tambahkan');
     setFormData({
+      medicalRecordNumber: '',
       name: '',
       age: '',
       gender: '',
@@ -38,6 +40,22 @@ const PatientAdd = () => {
     <div className="colums is-half">
       <h1 className="title">Form New Patient</h1>
       <form onSubmit={handleSubmit}>
+
+    <div className="field">
+    <label className="label">Nomor Rekam Medis</label>
+    <div className="control">
+        <input
+            className="input"
+            type="number"
+            placeholder="Nomor Rekam Medis"
+            value={formData.medicalRecordNumber}
+            onChange={(e) =>
+                setFormData({ ...formData, medicalRecordNumber: e.target.value })
+            }
+            required
+        />
+    </div>
+</div>
       <div className="field">
                 <label className="label">Nama Lengkap</label>
                 <div className="control">
