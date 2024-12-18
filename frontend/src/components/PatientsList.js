@@ -48,7 +48,7 @@ const PatientsList = () => {
                         </tr>
                     </thead>
                     <tbody>
-                    {patients.length > 0 ?(
+                    {Array.isArray(patients) && patients.length > 0 ?(
                     patients.map(patient => (
                                 <tr key={patient.medicalRecordNumber}>
                                     <td>{patient.medicalRecordNumber}</td>
