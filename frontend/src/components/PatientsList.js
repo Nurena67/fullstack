@@ -48,12 +48,8 @@ const PatientsList = () => {
                         </tr>
                     </thead>
                     <tbody>
-                    {patients.length === 0 ? (
-                        <tr>
-                            <td colSpan="5">No patients found.</td>
-                        </tr>
-                    ) : (
-                        patients.map(patient => (
+                    {patients.length > 0 ?(
+                    patients.map(patient => (
                                 <tr key={patient.medicalRecordNumber}>
                                     <td>{patient.medicalRecordNumber}</td>
                                     <td>{patient.name}</td>
@@ -67,7 +63,13 @@ const PatientsList = () => {
                                     </td>
                                 </tr>
                             ))
-                            )}
+                    ) : (
+                        <tr>
+                            <td colSpan="5" style={{ textAlign: 'center' }}>
+                                No data available.
+                            </td>
+                        </tr>
+                    )}
                     </tbody>
                 </table>
             </div>
