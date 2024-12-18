@@ -47,7 +47,8 @@ const PatientsList = () => {
                         </tr>
                     </thead>
                     <tbody>
-                    {patients.map(patient => (
+                    {Array.isArray(patients) && patients.length > 0 ?(
+                    patients.map(patient => (
                                 <tr key={patient.medicalRecordNumber}>
                                     <td>{patient.medicalRecordNumber}</td>
                                     <td>{patient.name}</td>
@@ -60,7 +61,14 @@ const PatientsList = () => {
                                         </button>
                                     </td>
                                 </tr>
-                            ))}
+                            ))
+                    ) : (
+                        <tr>
+                            <td colSpan="5" style={{ textAlign: 'center' }}>
+                                No data available.
+                            </td>
+                        </tr>
+                    )}
                     </tbody>
                 </table>
             </div>
