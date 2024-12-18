@@ -12,6 +12,7 @@ const PatientsList = () => {
         const getPatients = async () => {
             try {
                 const response = await fetchPatients();
+                console.log("Fetched patients data:", response.data); // Debugging data
                 setPatients(response.data);  // Menyimpan data ke state
             } catch (error) {
                 console.error("Error fetching patients:", error);
