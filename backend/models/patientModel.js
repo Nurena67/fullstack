@@ -9,6 +9,7 @@ const Patient = sequelize.define(
       allowNull: false,
       unique: true,
       primaryKey: true,
+      autoIncrement: true,
     },
     name: {
       type: Sequelize.TEXT,
