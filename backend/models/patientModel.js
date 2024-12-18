@@ -9,10 +9,9 @@ const Patient = sequelize.define(
       allowNull: false,
       unique: true,
       primaryKey: true,
-      autoIncrement: true,
     },
     name: {
-      type: Sequelize.STRING,
+      type: Sequelize.TEXT,
       allowNull: false,
     },
     age: {
@@ -30,7 +29,6 @@ const Patient = sequelize.define(
     medicalHistory: {
       type: Sequelize.TEXT,
       allowNull: true,
-      defaultValue: 'Tidak ada',
     },
     bloodGroup: {
       type: Sequelize.STRING,
@@ -42,6 +40,7 @@ const Patient = sequelize.define(
     },
   },
   {
+    timestamps: true,
     freezeTableName: true, // Prevent Sequelize from pluralizing table names
   }
 );
