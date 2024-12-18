@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-    baseURL: 'fullstack-production-b9d3.up.railway.app/patients'
+    baseURL: 'https://fullstack-production-b9d3.up.railway.app/patients'
 });
 
 
