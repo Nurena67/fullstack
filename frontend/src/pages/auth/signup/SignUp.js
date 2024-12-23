@@ -76,7 +76,7 @@ const SignUp = () => {
                 </div>
 
                 <p className="has-text-centered">
-                  Already have an account? <a href="#">Login here</a>
+                  Already have an account? <a href="/login">Login here</a>
                 </p>
               </form>
             </div>
