@@ -1,0 +1,61 @@
+/* General styling for the signup page */
+body {
+    background-color: #f5f7fa;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .hero {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+  }
+  
+  .box {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
+    color: #363636;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .input {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .input:focus {
+    border-color: #ff7e5f;
+    box-shadow: 0 0 0 3px rgba(255, 126, 95, 0.3);
+  }
+  
+  .button {
+    background-color: #ff7e5f;
+    color: white;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .button:hover {
+    background-color: #e66e53;
+    transform: translateY(-2px);
+  }
+  
+  .button:active {
+    background-color: #e66e53;
+    transform: translateY(0);
+  }
+  
+  .has-text-centered a {
+    color: #ff7e5f;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+  }
+  
+  .has-text-centered a:hover {
+    color: #e66e53;
+  }
+  
