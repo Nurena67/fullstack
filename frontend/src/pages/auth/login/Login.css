@@ -1,0 +1,61 @@
+/* General styling for the login page */
+body {
+    background-color: #f5f7fa;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .hero {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+  }
+  
+  .box {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
+    color: #363636;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .input {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .input:focus {
+    border-color: #2575fc;
+    box-shadow: 0 0 0 3px rgba(37, 117, 252, 0.3);
+  }
+  
+  .button {
+    background-color: #2575fc;
+    color: white;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .button:hover {
+    background-color: #1a5bb8;
+    transform: translateY(-2px);
+  }
+  
+  .button:active {
+    background-color: #1a5bb8;
+    transform: translateY(0);
+  }
+  
+  .has-text-centered a {
+    color: #2575fc;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+  }
+  
+  .has-text-centered a:hover {
+    color: #1a5bb8;
+  }
+  
