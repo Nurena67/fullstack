@@ -39,6 +39,14 @@ const Patient = sequelize.define(
       type: Sequelize.STRING,
       allowNull: true,
     },
+    userId: {
+      type: Sequelize.UUID,
+      allowNull: false,
+      references: {
+        model: 'User', // Nama tabel yang dituju
+        key: 'uuid',
+      },
+    },
   },
   {
     timestamps: true,
