@@ -15,7 +15,7 @@ app.use(express.json());
 app.use('/patients', patientRoutes);
 
 // Sync database
-sequelize.sync({ force: true }) // force: false akan mencegah penghapusan tabel yang sudah ada
+sequelize.sync({ force: false }) // force: false akan mencegah penghapusan tabel yang sudah ada
   .then(() => {
     console.log('Database synchronized');
   })
