@@ -14,14 +14,20 @@ app.use(cors());
 app.use(express.json());
 app.use('/patients', patientRoutes);
 
-// Sync database
-sequelize.sync({ force: false }) // force: false akan mencegah penghapusan tabel yang sudah ada
-  .then(() => {
-    console.log('Database synchronized');
-  })
-  .catch(err => {
-    console.log('Error syncing database: ', err);
-  });
+const syncDatabase = async () => {
+  try {
+    await sequelize.authenticate();
+    console.log('Database connected!');
+
+    // Sinkronisasi semua model
+    await sequelize.sync({ alter: true }); // `alter` untuk menyesuaikan perubahan
+    console.log('All models were synchronized successfully.');
+  } catch (error) {
+    console.error('Unable to connect to the database:', error);
+  }
+};
+
+syncDatabase();
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost ${PORT}`);
